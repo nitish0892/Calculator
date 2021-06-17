@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+	<style>
+		div{ background-color: dodgerblue;
+		width: 60%;
+		margin:0 auto; 
+		font-size:25px;
+		padding: 20px;
+		border: 7px orange ridge;
+		border-radius: 15px;
+		font-weight: bold;
+		color: yellow;}
+
+		button{ width: 50px;
+		height: 50px;
+		background-color: green;
+		color: white;
+		margin: 20px;
+		font-size:35px;
+		border-radius: 10px;
+		border: none;
+		cursor: pointer;
+		 }
+
+		h1{ background-color: purple;
+		color: white;
+		border-radius: 15px; }
+	</style>
+</head>
+<body>
+	<div>
+		<center> <h1>JS Calculator</h1>
+		Enter No. 1 &nbsp; <input id="a" type="text"> <br> <br>
+		Enter No. 2 &nbsp; <input id="b" type="text"> <br> <br>
+		<button id="p">+</button> 
+			<button id="m">-</button>
+				<button id="i">*</button>
+					<button id="d">/</button>
+						<button id="c">c</button>
+				 <br> <br>
+				Result <br>
+				 <input id="r" type="text" readonly></center>
+	</div>
+
+	<script>
+		document.querySelector('#p').addEventListener('click',function()
+		{
+			let v1=parseInt(document.querySelector('#a').value);
+			let v2=parseInt(document.querySelector('#b').value);
+
+			document.querySelector('#r').value=(v1+v2);
+		});
+
+		document.querySelector('#m').addEventListener('click',function()
+		{
+			let v1=parseInt(document.querySelector('#a').value);
+			let v2=parseInt(document.querySelector('#b').value);
+
+			document.querySelector('#r').value=(v1-v2);
+		});
+
+
+		document.querySelector('#i').addEventListener('click',function()
+		{
+			let v1=parseInt(document.querySelector('#a').value);
+			let v2=parseInt(document.querySelector('#b').value);
+
+			document.querySelector('#r').value=(v1*v2);
+		});
+
+		document.querySelector('#d').addEventListener('click',function()
+		{
+			let v1=parseInt(document.querySelector('#a').value);
+			let v2=parseInt(document.querySelector('#b').value);
+
+			document.querySelector('#r').value=(v1/v2);
+		});
+
+		document.querySelector('#c').addEventListener('click',function()
+		{
+			document.querySelector('#a').value='';
+			document.querySelector('#b').value='';
+			document.querySelector('#r').value='';
+
+				
+		
+		});
+	</script>
+</body>
+</html>
